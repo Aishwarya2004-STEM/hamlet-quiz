@@ -1,25 +1,12 @@
 <!DOCTYPE html> 
 <html> 
-<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
- 
-THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
- 
- 
+<!-- 
 Authors in chronological order of contribution:
-Anirudh Sudarshan
- 
-Further Information:
-http://diystream.cns.utexas.edu/
+Aishwarya Sudarshan
 
-Research Educator:
-Timothy Riedel
-triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
- 
-Known Issues:
-blah, blah, blah, blah
+To determine which character that the users are most related to in the novel of Hamlet
 -->
 
    <head> 
@@ -31,7 +18,7 @@ blah, blah, blah, blah
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 <!-- 
-this is the title and links to set up the Cold or Allergies Diagnostic App
+this is the title and links to set up the website
 --> 
 
 <script>
@@ -41,7 +28,7 @@ this is the title and links to set up the Cold or Allergies Diagnostic App
 	var char4 = 0;
 	var char5 = 0;
 
-// above are the variables that store the allergy or cold count from user input
+// above are the variables that store the amount each character related answer has been picked
 
         function char1Add(){
             char1 = char1 + 1;
@@ -65,7 +52,7 @@ this is the title and links to set up the Cold or Allergies Diagnostic App
             char5 = char5 + 1;
 
         }
-// above are the functions that define the coldAdd and allergyAdd function that add a count to the counter with the user input
+// above are the functions that define the function for each character that add a count to the counter with the user input
 
 	function finalResults() {
 	char1 = char1/6*100
@@ -115,17 +102,16 @@ this is the title and links to set up the Cold or Allergies Diagnostic App
 	
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Which Character from Hamlet Are You?</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	<p>The following questions will allow you to see which charater you are most likely like!</p>
+
 <!-- creates the header of the first intro page and adds libaility info 
 --> 
 	

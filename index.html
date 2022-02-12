@@ -35,28 +35,44 @@ this is the title and links to set up the Cold or Allergies Diagnostic App
 --> 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var char1 = 0;
+        var char2 = 0;
+	var char3 = 0;
+	var char4 = 0;
+	var char5 = 0;
 
 // above are the variables that store the allergy or cold count from user input
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
+        function char1Add(){
+            char1 = char1 + 1;
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function char2Add(){
+            char2 = char2 + 1;
 
         }
 	
+	function char3Add(){
+            char3 = char3 + 1;
+
+        }
+	function char4Add(){
+            char4 = char4 + 1;
+
+        }
+	
+	function char5Add(){
+            char5 = char5 + 1;
+
+        }
 // above are the functions that define the coldAdd and allergyAdd function that add a count to the counter with the user input
 
 	function finalResults() {
-	allergyPercent = allergy_count/6*100
-	coldPercent = cold_count/6*100
+	char1 = char1/6*100
+	char2 = char2/6*100
 	
 	var resultText = document.getElementById("results")
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" +coldPercent; 
+	resultText.innerHTML = "Probability it is char1 =" + char1 + "<br> Probability it is char2 =" + char2; 
 
 }
 	
@@ -114,10 +130,13 @@ this is the title and links to set up the Cold or Allergies Diagnostic App
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p> Are your eyes watery or itchy?</p>    
+        <p> Scenario 1?</p>    
     	</div>
-	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#two" onclick="char1Add();" class="w3-btn w3-black"> answer1 </a>
+	<a href="#two" onclick="char2Add();" class="w3-btn w3-black"> answer2 </a>
+	<a href="#two" onclick="char3Add();" class="w3-btn w3-black"> answer3 </a>
+	<a href="#two" onclick="char4Add();" class="w3-btn w3-black"> answer4 </a>
+	<a href="#two" onclick="char5Add();" class="w3-btn w3-black"> answer5 </a>
 </div>
 
 	<!-- creates the first page and Yes/No buttons 
@@ -128,10 +147,13 @@ this is the title and links to set up the Cold or Allergies Diagnostic App
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
+		<p>Scenario 2?</p>
 	</div>
-	<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#two" onclick="char1Add();" class="w3-btn w3-black"> answer1 </a>
+	<a href="#two" onclick="char2Add();" class="w3-btn w3-black"> answer2 </a>
+	<a href="#two" onclick="char3Add();" class="w3-btn w3-black"> answer3 </a>
+	<a href="#two" onclick="char4Add();" class="w3-btn w3-black"> answer4 </a>
+	<a href="#two" onclick="char5Add();" class="w3-btn w3-black"> answer5 </a>
 </div>	
 	<!-- creates the second page and Yes/No buttons 
 	--> 
@@ -142,10 +164,13 @@ this is the title and links to set up the Cold or Allergies Diagnostic App
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p>
+		<p>Scenario 3?</p>
 	</div>
-	<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#two" onclick="char1Add();" class="w3-btn w3-black"> answer1 </a>
+	<a href="#two" onclick="char2Add();" class="w3-btn w3-black"> answer2 </a>
+	<a href="#two" onclick="char3Add();" class="w3-btn w3-black"> answer3 </a>
+	<a href="#two" onclick="char4Add();" class="w3-btn w3-black"> answer4 </a>
+	<a href="#two" onclick="char5Add();" class="w3-btn w3-black"> answer5 </a>
 </div>	
 	<!-- creates the third page and Yes/No buttons 
 	--> 
@@ -155,10 +180,13 @@ this is the title and links to set up the Cold or Allergies Diagnostic App
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Are your symptoms seasonal or chronic?</p>
+		<p>Scenario 4?</p>
 	</div>
-	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#two" onclick="char1Add();" class="w3-btn w3-black"> answer1 </a>
+	<a href="#two" onclick="char2Add();" class="w3-btn w3-black"> answer2 </a>
+	<a href="#two" onclick="char3Add();" class="w3-btn w3-black"> answer3 </a>
+	<a href="#two" onclick="char4Add();" class="w3-btn w3-black"> answer4 </a>
+	<a href="#two" onclick="char5Add();" class="w3-btn w3-black"> answer5 </a>
 </div>	
 	
 	<!-- creates the fourth page and Yes/No buttons 
@@ -170,10 +198,13 @@ this is the title and links to set up the Cold or Allergies Diagnostic App
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have any rashes?</p>
+		<p>Scneario 5?</p>
 	</div>
-	<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#six" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#two" onclick="char1Add();" class="w3-btn w3-black"> answer1 </a>
+	<a href="#two" onclick="char2Add();" class="w3-btn w3-black"> answer2 </a>
+	<a href="#two" onclick="char3Add();" class="w3-btn w3-black"> answer3 </a>
+	<a href="#two" onclick="char4Add();" class="w3-btn w3-black"> answer4 </a>
+	<a href="#two" onclick="char5Add();" class="w3-btn w3-black"> answer5 </a>
 </div>	
 	
 	<!-- creates the fifth page and Yes/No buttons 
@@ -185,10 +216,13 @@ this is the title and links to set up the Cold or Allergies Diagnostic App
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have body aches?</p>
+		<p>Scenario 6??</p>
 	</div>
-	<a href="#results" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#results" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#two" onclick="char1Add();" class="w3-btn w3-black"> answer1 </a>
+	<a href="#two" onclick="char2Add();" class="w3-btn w3-black"> answer2 </a>
+	<a href="#two" onclick="char3Add();" class="w3-btn w3-black"> answer3 </a>
+	<a href="#two" onclick="char4Add();" class="w3-btn w3-black"> answer4 </a>
+	<a href="#two" onclick="char5Add();" class="w3-btn w3-black"> answer5 </a>
 </div>	
 	
 	<!-- creates the sixth page and Yes/No buttons 

@@ -1,0 +1,70 @@
+.body {
+    margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.page:target {
+    left: 0vw;
+    z-index: 1;
+}
+
+body {
+	border-top: 0;
+	text-align: center;
+	font-family: "Montserrat";
+	background-color: #D4F3EE;
+}
+h1 {
+	font-size: 4rem;
+	font-family: "Montserrat";
+	font-weight: 900;
+	padding: 1rem;
+	color: white;
+}
+p {
+	font-size: 2rem;
+	padding: 1rem;
+}
+
+#get-started-button, .button-styling {
+	background-color: #efc570;
+	color:  black;
+	padding: 1.5rem 3rem;
+	margin: .5rem;
+	text-decoration: none;
+	border: none;
+	font-size: 1.5rem;
+}
+#get-started-button:hover, .button-styling: hover{
+	background-color: #deb459;
+}
+
+.navigation {
+	background-color: #063332;
+	margin: 0;
+
+}
+
+#header, .header {
+	background-color: #063332 ;
+
+}
+
+#opener-div {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+
+
+

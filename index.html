@@ -1,244 +1,178 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 <!-- 
 Authors in chronological order of contribution:
 Aishwarya Sudarshan
-
+Snaeha Shriram
  
 Brief Description of Goal of Code:
 To determine which character that the users are most related to in the novel of Hamlet
 -->
 
-   <head> 
-      
-	   <title>Hamlet Quiz</title>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <link rel="stylesheet" href="w3.css">
-      <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
+<head>
+    <meta charset="utf-8">
+    <title>Hamlet Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- I am trying to only code in css that we will definitely use as much as
+    possible, so I'm unlinking these css sheets -->
+    <!--<link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="w3-colors-flat.css"> -->
+    <!-- CSS Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</head>
 <!-- 
 this is the title and links to set up the website
---> 
+-->
 
-<script>
-        var char1 = 0;
-        var char2 = 0;
-	var char3 = 0;
-	var char4 = 0;
-	var char5 = 0;
-
-// above are the variables that store the amount each character related answer has been picked
-
-        function char1Add(){
-            char1 = char1 + 1;
-        }
-
-        function char2Add(){
-            char2 = char2 + 1;
-
-        }
-	
-	function char3Add(){
-            char3 = char3 + 1;
-
-        }
-	function char4Add(){
-            char4 = char4 + 1;
-
-        }
-	
-	function char5Add(){
-            char5 = char5 + 1;
-
-        }
-// above are the functions that define the function for each character that add a count to the counter with the user input
-
-	function finalResults() {
-	char1 = char1/6*100
-	char2 = char2/6*100
-	char3 = char3/6*100
-	char4 = char4/6*100
-	char5 = char5/6*100	
-		
-	
-	var resultText = document.getElementById("results")
-	resultText.innerHTML = "You are " + char1 + "% char1" + "<br>You are " + char2 + "% char2" 
-		+ "<br>You are " + char3 + "% char3"  + "<br>You are " + char4 + "% char4"  + "<br>You are " + char5 + "% char5" ; 
-
-}
-	
-// above is the function that defines the final calculations and to output results
-	
- 
-  </script>
-
-
-
-<style>	
-.body {
-     margin: 0em;
-}
-
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
-
-  .page:target {
-    left: 0vw;
-    z-index: 1;
-}
-</style>
-
-<!-- above are the CSS styling code to design my page 
---> 
-	
 <body>
-<div id="header" class="w3-container w3-flat-amethyst">
-	<h1>Which Character from Hamlet Are You?</h1>
-</div>
-	
-<div id="content" class="w3-container">
-	<p>Answer a few short questions to find out!</p>
-	
-	<a href="#one" class="w3-btn w3-pink w3-round"> Get Started </a>
-	
-	<p>The following questions will allow you to see which charater you are most likely like!</p>
+    <section class="navigation">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-dark navbar-formatting">
+                <a href="#" class="navbar-brand">Hamlet Quiz</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                    <ul class="navbar-nav text-center ms-auto">
+                        <li>
+                            <a class="nav-link" href="#"> Home </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#"> Quiz </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#"> Citations </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <div id="header" class="w3-container">
+        <h1>Which Character from Hamlet Are You?</h1>
+    </div>
+    <div id="content" class="w3-container">
+        <div id="opener-div">
+            <p>Answer a few short questions to find out!</p>
+            <a href="#one" id="get-started-button" class="btn btn-primary"> Get Started </a>
+            <p>The following questions will allow you to see which charater you are most likely like!</p>
+        </div>
+        <!-- creates the header of the first intro page and adds libaility info 
+-->
+        <div class="page" id="one">
+            <div id="header" class="w3-container w3-flat-amethyst">
+                <h1>Question 1</h1>
+            </div>
+            <div id="content" class="w3-container">
+                <p> Scenario 1?</p>
+            </div>
+            <a href="#two" onclick="char1Add();" class="w3-btn w3-sand button-styling"> answer1 </a>
+            <a href="#two" onclick="char2Add();" class="w3-btn w3-sand button-styling"> answer2 </a>
+            <a href="#two" onclick="char3Add();" class="w3-btn w3- button-styling"> answer3 </a>
+            <a href="#two" onclick="char4Add();" class="w3-btn w3-sand button-styling"> answer4 </a>
+            <a href="#two" onclick="char5Add();" class="w3-btn w3-sand button-styling"> answer5 </a>
+        </div>
+        <!-- creates the first page and Yes/No buttons 
+	-->
+        <div class="page" id="two">
+            <div class="w3-container header">
+                <h1>Question 2</h1>
+            </div>
+            <div id="content" class="w3-container">
+                <p>Scenario 2?</p>
+            </div>
+            <a href="#three" onclick="char1Add();" class="w3-btn w3-sand button-styling"> answer1 </a>
+            <a href="#three" onclick="char2Add();" class="w3-btn w3-sand button-styling"> answer2 </a>
+            <a href="#three" onclick="char3Add();" class="w3-btn w3-sand button-styling"> answer3 </a>
+            <a href="#three" onclick="char4Add();" class="w3-btn w3-sand button-styling"> answer4 </a>
+            <a href="#three" onclick="char5Add();" class="w3-btn w3-sand button-styling"> answer5 </a>
+        </div>
+        <!-- creates the second page and Yes/No buttons 
+	-->
+        <div class="page" id="three">
+            <div class="w3-container header">
+                <h1>Question 3</h1>
+            </div>
+            <div id="content" class="w3-container">
+                <p>Scenario 3?</p>
+            </div>
+            <a href="#four" onclick="char1Add();" class="w3-btn w3-sand button-styling"> answer1 </a>
+            <a href="#four" onclick="char2Add();" class="w3-btn w3-sand button-styling"> answer2 </a>
+            <a href="#four" onclick="char3Add();" class="w3-btn w3-sand button-styling"> answer3 </a>
+            <a href="#four" onclick="char4Add();" class="w3-btn w3-sand button-styling"> answer4 </a>
+            <a href="#four" onclick="char5Add();" class="w3-btn w3-sand button-styling"> answer5 </a>
+        </div>
+        <!-- creates the third page and Yes/No buttons 
+	-->
+        <div class="page" id="four">
+            <div class="w3-container header">
+                <h1>Question 4</h1>
+            </div>
+            <div id="content" class="w3-container">
+                <p>Scenario 4?</p>
+            </div>
+            <a href="#five" onclick="char1Add();" class="w3-btn w3-sand button-styling"> answer1 </a>
+            <a href="#five" onclick="char2Add();" class="w3-btn w3-sand button-styling"> answer2 </a>
+            <a href="#five" onclick="char3Add();" class="w3-btn w3-sand button-styling"> answer3 </a>
+            <a href="#five" onclick="char4Add();" class="w3-btn w3-sand button-styling"> answer4 </a>
+            <a href="#five" onclick="char5Add();" class="w3-btn w3-sand button-styling"> answer5 </a>
+        </div>
+        <!-- creates the fourth page and Yes/No buttons 
+	-->
+        <div class="page" id="five">
+            <div class="w3-container header">
+                <h1>Question 5</h1>
+            </div>
+            <div id="content" class="w3-container">
+                <p>Scneario 5?</p>
+            </div>
+            <a href="#six" onclick="char1Add();" class="w3-btn w3-sand button-styling"> answer1 </a>
+            <a href="#six" onclick="char2Add();" class="w3-btn w3-sand button-styling"> answer2 </a>
+            <a href="#six" onclick="char3Add();" class="w3-btn w3-sand button-styling"> answer3 </a>
+            <a href="#six" onclick="char4Add();" class="w3-btn w3-sand button-styling"> answer4 </a>
+            <a href="#six" onclick="char5Add();" class="w3-btn w3-sand button-styling"> answer5 </a>
+        </div>
+        <!-- creates the fifth page and Yes/No buttons 
+	-->
+        <div class="page" id="six">
+            <div class="w3-container header">
+                <h1>Question 6</h1>
+            </div>
+            <div id="content" class="w3-container">
+                <p>Scenario 6??</p>
+            </div>
+            <a href="#results" onclick="char1Add();" class="w3-btn w3-sand button-styling"> answer1 </a>
+            <a href="#results" onclick="char2Add();" class="w3-btn w3-sand button-styling"> answer2 </a>
+            <a href="#results" onclick="char3Add();" class="w3-btn w3-sand button-styling"> answer3 </a>
+            <a href="#results" onclick="char4Add();" class="w3-btn w3-sand button-styling"> answer4 </a>
+            <a href="#results" onclick="char5Add();" class="w3-btn w3-sand button-styling"> answer5 </a>
+        </div>
+        <!-- creates the sixth page and Yes/No buttons 
+	-->
+    </div>
+    <div class="page" id="results">
+        <div class="w3-container header">
+            <h1>Results!</h1>
+        </div>
+        <a onclick="finalResults();" class=" button-styling w3-btn"> Calculate the Final Results! </a>
+        <div id="content" class="w3-container">
+            <p id="results"></p>
+        </div>
+    </div>
+    <!-- creates the results page and displays results 
+	-->
+    <footer class="w3-bottom w3-container">
+    </footer>
+    <script src="index.js"></script>
+</body>
 
-<!-- creates the header of the first intro page and adds libaility info 
---> 
-	
-<div class="page" id="one">
-	<div id="header" class="w3-container w3-flat-amethyst">
-		<h1>Question 1</h1>
-	</div>
-	
-    	<div id="content" class="w3-container">
-        <p> Scenario 1?</p>    
-    	</div>
-	<a href="#two" onclick="char1Add();" class="w3-btn w3-sand"> answer1 </a>
-	<a href="#two" onclick="char2Add();" class="w3-btn w3-sand"> answer2 </a>
-	<a href="#two" onclick="char3Add();" class="w3-btn w3-sand"> answer3 </a>
-	<a href="#two" onclick="char4Add();" class="w3-btn w3-sand"> answer4 </a>
-	<a href="#two" onclick="char5Add();" class="w3-btn w3-sand"> answer5 </a>
-</div>
-
-	<!-- creates the first page and Yes/No buttons 
-	--> 
-<div class="page" id="two">
-	<div class="w3-container w3-flat-amethyst">
-		<h1>Question 2</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p>Scenario 2?</p>
-	</div>
-	<a href="#three" onclick="char1Add();" class="w3-btn w3-sand"> answer1 </a>
-	<a href="#three" onclick="char2Add();" class="w3-btn w3-sand"> answer2 </a>
-	<a href="#three" onclick="char3Add();" class="w3-btn w3-sand"> answer3 </a>
-	<a href="#three" onclick="char4Add();" class="w3-btn w3-sand"> answer4 </a>
-	<a href="#three" onclick="char5Add();" class="w3-btn w3-sand"> answer5 </a>
-</div>	
-	<!-- creates the second page and Yes/No buttons 
-	--> 
-	
-<div class="page" id="three">
-	<div class="w3-container w3-flat-amethyst">
-		<h1>Question 3</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p>Scenario 3?</p>
-	</div>
-	<a href="#four" onclick="char1Add();" class="w3-btn w3-sand"> answer1 </a>
-	<a href="#four" onclick="char2Add();" class="w3-btn w3-sand"> answer2 </a>
-	<a href="#four" onclick="char3Add();" class="w3-btn w3-sand"> answer3 </a>
-	<a href="#four" onclick="char4Add();" class="w3-btn w3-sand"> answer4 </a>
-	<a href="#four" onclick="char5Add();" class="w3-btn w3-sand"> answer5 </a>
-</div>	
-	<!-- creates the third page and Yes/No buttons 
-	--> 
-	<div class="page" id="four">
-	<div class="w3-container w3-flat-amethyst">
-		<h1>Question 4</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p>Scenario 4?</p>
-	</div>
-	<a href="#five" onclick="char1Add();" class="w3-btn w3-sand"> answer1 </a>
-	<a href="#five" onclick="char2Add();" class="w3-btn w3-sand"> answer2 </a>
-	<a href="#five" onclick="char3Add();" class="w3-btn w3-sand"> answer3 </a>
-	<a href="#five" onclick="char4Add();" class="w3-btn w3-sand"> answer4 </a>
-	<a href="#five" onclick="char5Add();" class="w3-btn w3-sand"> answer5 </a>
-</div>	
-	
-	<!-- creates the fourth page and Yes/No buttons 
-	--> 
-
-<div class="page" id="five">
-	<div class="w3-container w3-flat-amethyst">
-		<h1>Question 5</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p>Scneario 5?</p>
-	</div>
-	<a href="#six" onclick="char1Add();" class="w3-btn w3-sand"> answer1 </a>
-	<a href="#six" onclick="char2Add();" class="w3-btn w3-sand"> answer2 </a>
-	<a href="#six" onclick="char3Add();" class="w3-btn w3-sand"> answer3 </a>
-	<a href="#six" onclick="char4Add();" class="w3-btn w3-sand"> answer4 </a>
-	<a href="#six" onclick="char5Add();" class="w3-btn w3-sand"> answer5 </a>
-</div>	
-	
-	<!-- creates the fifth page and Yes/No buttons 
-	--> 
-
-<div class="page" id="six">
-	<div class="w3-container w3-flat-amethyst">
-		<h1>Question 6</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p>Scenario 6??</p>
-	</div>
-	<a href="#results" onclick="char1Add();" class="w3-btn w3-sand"> answer1 </a>
-	<a href="#results" onclick="char2Add();" class="w3-btn w3-sand"> answer2 </a>
-	<a href="#results" onclick="char3Add();" class="w3-btn w3-sand"> answer3 </a>
-	<a href="#results" onclick="char4Add();" class="w3-btn w3-sand"> answer4 </a>
-	<a href="#results" onclick="char5Add();" class="w3-btn w3-sand"> answer5 </a>
-</div>	
-	
-	<!-- creates the sixth page and Yes/No buttons 
-	--> 
-
-	
-	
-</div>		
-	<div class="page" id="results">
-	<div class="w3-container w3-flat-amethyst">
-		<h1>Results!</h1>
-	</div>
-	
-	<a onclick="finalResults();" class="w3-btn w3-pink w3-round"> Calculate the Final Results! </a>
-	<div id="content" class="w3-container">
-       <p id="results"></p>
-	</div>
-</div>	
-
-	<!-- creates the results page and displays results 
-	--> 
-<footer class="w3-bottom w3-container w3-flat-amethyst">
-	<p>DIY!</p>
-</footer>
-
-	   
-   </body>
 </html>

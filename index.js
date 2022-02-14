@@ -1,5 +1,3 @@
-console.log("Hey it's working!")
-
 var char1 = 0;
 var char2 = 0;
 var char3 = 0;

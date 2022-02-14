@@ -25,7 +25,7 @@ body {
 	background-color: #D4F3EE;
 }
 h1 {
-	font-size: 4rem;
+	font-size: 3.5rem;
 	font-family: "Montserrat";
 	font-weight: 900;
 	padding: 1rem;
@@ -49,6 +49,13 @@ p {
 	background-color: #deb459;
 }
 
+#cursive-font {
+	font-family: 'Bonheur Royale', cursive;
+	font-size: 2.2rem;
+	margin: 0;
+	padding: 0;
+}
+
 .navigation {
 	background-color: #063332;
 	margin: 0;
@@ -68,3 +75,116 @@ p {
 
 
 
+
+
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #063332;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    padding: 1.5rem 0;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 2rem 0;
+}
+
+h3 {
+	font-weight: 700;
+	font-size: 2rem;
+	padding: 1.5rem 0;
+}
+
+
+.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+
+.button-style {
+    background-color: #efc570;
+    padding: 15px 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    border-radius: 13px;
+}
+
+.top-container {
+    background-image: url("hamlet-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 13% 3%;
+}
+
+.background-shape {
+    background-color: #063332;
+    width: 100%;
+    padding: 4rem;
+    position: relative;
+    border-radius: 40px;
+    height: 100%;
+
+}
+
+.answer-shape {
+    background-color: #063332;
+    width: 100%;
+    padding: 1.8rem;
+    position: relative;
+    border-radius: 20px;
+    height: 25%;
+}
+
+.answer-shape:hover {
+	background-color: #032423;
+}
+
+.answer-text {
+	color: white;
+	border: none;
+}
+
+button {
+	margin:  .5rem;
+	padding: 0;
+	border: none;
+	border-radius: 20px;
+	background-color: #063332;
+}
+
+.question-heading {
+	background-color: #063332;
+    width: 40%;
+    padding: 2.4rem;
+    position: relative;
+    border-radius: 25px;
+    height: 20%;
+    margin-left: 30%;
+    margin-bottom:  2rem;
+
+}
+
+.question-heading-text {
+	text-align: center;
+	padding: .2rem;
+}
+
+.first-answer {
+	margin-top:  0;
+}

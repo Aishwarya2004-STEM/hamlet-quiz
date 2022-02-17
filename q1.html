@@ -47,14 +47,12 @@ this is the title and links to set up the website
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav text-center ms-auto">
                         <li>
-                            <a class="nav-link" href="index.html"> Home </a>
+                            <a class="nav-link" href="index.html" id="home-btn"> Home </a>
                         </li>
                         <li>
                             <a class="nav-link" href="q1.html"> Quiz </a>
                         </li>
-                        <li>
-                            <a class="nav-link" href="faq.html"> FAQ </a>
-                        </li>
+                        
                     </ul>
                 </div>
             </nav>
@@ -70,43 +68,43 @@ this is the title and links to set up the website
             <div class="col-lg-6">
                 <div class="background-shape">
                     
-                        <h3 id="input-el">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</h3>
-                        <p>Further explanation of the question should go here if necessary.</p>
+                        <h3 id="input-el">When the unexpected happens in a situation and impacts some part of your life negatively, what is your response?</h3>
+                        <p>For example, you miss a deadline or fail a test.</p>
                     
                 </div>
 
             </div>
             <div class="col-lg-6">
                 <a href="q2.html">
-                <button onclick="char1Add();" class="first-answer">
+                <button onclick="q1a1();" class="first-answer" id="q1-a1">
                     <div  class="answer-shape">
-                        <h5 class="answer-text" id="input-el">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                        <h5 class="answer-text" id="input-el">Emotional response</h5>
                     </div>
                 </button>
             </a>
             <a href="q2.html">
-                <button  onclick="char2Add();">
+                <button  onclick="q1a2();" id="q1-a2">
                     <div  class="answer-shape">
-                        <h5 class="answer-text" id="input-el">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                        <h5 class="answer-text" id="input-el">Moving onto the next opportunity</h5>
                     </div>
                 </button>
             </a>
             <a href="q2.html"> 
-                <button onclick="char3Add();">
-                    <div  class="answer-shape">
-                        <h5 class="answer-text" id="input-el">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</h5>
-                    </div>
-                </button>
-            </a>
-            <a href="q2.html"> 
-                <button onclick="char4Add();">
+                <button onclick="q1a3();" id="q1-a3">
                     <div class="answer-shape">
-                        <h5  class="answer-text" id="input-el">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                        <h5 class="answer-text" id="input-el">Confused about what you should do or ask others for advice</h5>
+                    </div>
+                </button>
+            </a>
+            <a href="q2.html"> 
+                <button onclick="q1a4();" id="q1-a4">
+                    <div class="answer-shape">
+                        <h5  class="answer-text" id="input-el">Trying again for the same opportunity</h5>
                     </div>
                 </button>
             </a>
             </div>
         </div>
     </section>
-
+<script src="index.js"></script>
 </body>

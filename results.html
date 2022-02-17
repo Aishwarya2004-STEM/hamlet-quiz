@@ -47,14 +47,12 @@ this is the title and links to set up the website
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav text-center ms-auto">
                         <li>
-                            <a class="nav-link" href="index.html"> Home </a>
+                            <a class="nav-link" href="index.html" id="home-btn"> Home </a>
                         </li>
                         <li>
                             <a class="nav-link" href="q1.html"> Quiz </a>
                         </li>
-                        <li>
-                            <a class="nav-link" href="faq.html"> FAQ </a>
-                        </li>
+                        
                     </ul>
                 </div>
             </nav>
@@ -65,9 +63,13 @@ this is the title and links to set up the website
         <div class="w3-container header">
             <h1>Results!</h1>
         </div>
-        <a onclick="finalResults();" class=" button-styling w3-btn"> Calculate the Final Results! </a>
+        <a class=" button-styling w3-btn" id="results"> Calculate the Final Results! </a>
+        <br>
+        <br>
+        <br>
         <div id="content" class="w3-container">
-            <p id="results"></p>
+            <h1 id="display-results"></h1>
         </div>
- 
+
+ <script src="index.js"></script>
  </body>
